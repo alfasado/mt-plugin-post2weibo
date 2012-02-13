@@ -1,0 +1,25 @@
+name: Post2Weibo
+id:   Post2Weibo
+key:  post2weibo
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+version: 0.1
+l10n_class: Post2Weibo::L10N
+description: <__trans phrase="Post entry to Weibo.">
+blog_config_template: post2weibo_config.tmpl
+settings:
+    weibo_source:
+    weibo_username:
+    weibo_password:
+    weibo_post_entry:
+        default: 1
+    weibo_post_page:
+        default: 0
+    twitter_hashtag2weibo:
+        default: 1
+    weibo_template:
+        default: '<$MTEntryClass setvar="entry_class"$><mt:if name="entry_class" eq="entry"><$MTEntryTitle$><mt:else><$MTPageTitle$></mt:if>'
+    weibo_hashtag:
+callbacks:
+    cms_post_save.entry: $post2weibo::Post2Weibo::Plugin::_post2weibo
+    cms_post_save.page: $post2weibo::Post2Weibo::Plugin::_post2weibo

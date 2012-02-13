@@ -1,0 +1,48 @@
+<mtapp:setting
+    id="weibo_source"
+    label="<__trans phrase="AppKey">">
+    <input type="text" class="text" id="weibo_source" name="weibo_source" value="<mt:var name="weibo_source" escape="html">" />
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_username"
+    label="<__trans phrase="Username">">
+    <input type="text" class="text" id="weibo_username" name="weibo_username" value="<mt:var name="weibo_username" escape="html">" />
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_password"
+    label="<__trans phrase="Password">">
+    <input type="password" class="text" id="weibo_password" name="weibo_password" value="<mt:var name="weibo_password" escape="html">" />
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_post_entry"
+    label="<__trans phrase="Entry">">
+    <label>
+    <input type="checkbox" class="cb" id="weibo_post_entry" name="weibo_post_entry" value="1" <mt:if name="weibo_post_entry">checked="checked"</mt:if>>
+        <__trans phrase="Post entry to Weibo">
+    <input type="hidden" name="weibo_post_entry" value="0" />
+    </label>
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_post_page"
+    label="<__trans phrase="Page">">
+    <label>
+    <input type="checkbox" class="cb" id="weibo_post_page" name="weibo_post_page" value="1" <mt:if name="weibo_post_page">checked="checked"</mt:if>>
+        <__trans phrase="Post page to Weibo">
+    <input type="hidden" name="weibo_post_page" value="0" />
+    </label>
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_template"
+    label="<__trans phrase="Weibo template">">
+    <input type="text" class="text" id="weibo_template" name="weibo_template" value="<mt:var name="weibo_template" escape="html">" />
+    <p class="hint"><__trans phrase="URL and hashtag will automatically be added."></p>
+</mtapp:setting>
+<mtapp:setting
+    id="weibo_hashtag"
+    label="<__trans phrase="Add Hashtag">">
+    <input type="text" class="text" name="weibo_hashtag" value="<mt:var name="weibo_hashtag">" />
+    <p class="hint">
+        <__trans phrase="Comma district switching off, space is removed at posting."><br />
+        <__trans phrase="ex">: foo, bar, hoge
+    </p>
+</mtapp:setting>
