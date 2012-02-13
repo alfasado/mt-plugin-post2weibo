@@ -61,7 +61,7 @@ sub _post2weibo {
         my $error = $data->{ error };
         $app->log( {
             message => $plugin->translate( 
-                'An error occurred while trying to post to Weibo : ([_1])[_2]', $error ),
+                'An error occurred while trying to post to Weibo : ([_1])[_2]', $error_code, $error ),
             blog_id => $obj->blog_id,
             author_id => $app->user->id,
             class => 'post2weibo',
